@@ -6,7 +6,7 @@
       "type": "FabricWorkspaceItemEvents",
       "properties": {
         "eventScope": "Workspace",
-        "workspaceId": "8d8d00a7-0e8a-4e3b-8c0e-8dcafac7adec",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
         "includedEventTypes": [
           "Microsoft.Fabric.ItemCreateSucceeded",
           "Microsoft.Fabric.ItemCreateFailed",
@@ -25,9 +25,9 @@
       "name": "dw-gold",
       "type": "FabricOneLakeEvents",
       "properties": {
-        "tenantId": "4e921ed2-9b1c-457c-a917-16ef468eb90a",
-        "workspaceId": "8d8d00a7-0e8a-4e3b-8c0e-8dcafac7adec",
-        "itemId": "7e2bbf6b-43fb-498c-90e3-56199c8c3b5e",
+        "tenantId": "2f6fdebd-fa25-44d4-8be1-d2e5360a6e6d",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "ec6604ba-216f-4850-873c-39ba53b9a6d5",
         "oneLakePaths": [
           "/Tables"
         ],
@@ -48,8 +48,8 @@
       "type": "FabricJobEvents",
       "properties": {
         "eventScope": "Item",
-        "workspaceId": "8d8d00a7-0e8a-4e3b-8c0e-8dcafac7adec",
-        "itemId": "02b37a75-fb44-4efb-9d88-b6171a4d0d7d",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "d01d081c-c740-4b27-b3b9-ae99e876b737",
         "includedEventTypes": [
           "Microsoft.Fabric.JobEvents.ItemJobCreated",
           "Microsoft.Fabric.JobEvents.ItemJobStatusChanged",
@@ -64,9 +64,9 @@
       "name": "lh-bronze-storage",
       "type": "FabricOneLakeEvents",
       "properties": {
-        "tenantId": "4e921ed2-9b1c-457c-a917-16ef468eb90a",
-        "workspaceId": "8d8d00a7-0e8a-4e3b-8c0e-8dcafac7adec",
-        "itemId": "c6c5024f-de55-45ca-a79a-decbe16235e3",
+        "tenantId": "2f6fdebd-fa25-44d4-8be1-d2e5360a6e6d",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "bf3afb3e-1567-46a1-a3fd-1058ee2826f7",
         "oneLakePaths": [
           "/Tables",
           "/Files"
@@ -88,8 +88,8 @@
       "type": "FabricJobEvents",
       "properties": {
         "eventScope": "Item",
-        "workspaceId": "8d8d00a7-0e8a-4e3b-8c0e-8dcafac7adec",
-        "itemId": "dcbe357b-2a94-4d28-a21f-8e2300e33f89",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "f462c0a8-3b04-4e63-81c3-0dc0a0af5ded",
         "includedEventTypes": [
           "Microsoft.Fabric.JobEvents.ItemJobCreated",
           "Microsoft.Fabric.JobEvents.ItemJobStatusChanged",
@@ -104,9 +104,9 @@
       "name": "lh-silver-storage",
       "type": "FabricOneLakeEvents",
       "properties": {
-        "tenantId": "4e921ed2-9b1c-457c-a917-16ef468eb90a",
-        "workspaceId": "8d8d00a7-0e8a-4e3b-8c0e-8dcafac7adec",
-        "itemId": "cc80a0ab-603d-4df9-bdfc-c35a7e8ab095",
+        "tenantId": "2f6fdebd-fa25-44d4-8be1-d2e5360a6e6d",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "eb7b79cc-b0e6-4414-b636-bbe0f6e4ac45",
         "oneLakePaths": [
           "/Tables",
           "/Files"
@@ -130,8 +130,8 @@
       "type": "Eventhouse",
       "properties": {
         "dataIngestionMode": "ProcessedIngestion",
-        "workspaceId": "00000000-0000-0000-0000-000000000000",
-        "itemId": "b22b1edd-6292-97ea-4089-fe9314ea1177",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "19510765-0b90-4ee4-826e-fda387497282",
         "databaseName": "kdb_fabricEvents",
         "tableName": "storageEvents",
         "inputSerialization": {
@@ -234,8 +234,8 @@
       "type": "Eventhouse",
       "properties": {
         "dataIngestionMode": "ProcessedIngestion",
-        "workspaceId": "00000000-0000-0000-0000-000000000000",
-        "itemId": "b22b1edd-6292-97ea-4089-fe9314ea1177",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "19510765-0b90-4ee4-826e-fda387497282",
         "databaseName": "kdb_fabricEvents",
         "tableName": "workspaceEvents",
         "inputSerialization": {
@@ -338,8 +338,8 @@
       "type": "Eventhouse",
       "properties": {
         "dataIngestionMode": "ProcessedIngestion",
-        "workspaceId": "00000000-0000-0000-0000-000000000000",
-        "itemId": "b22b1edd-6292-97ea-4089-fe9314ea1177",
+        "workspaceId": "2836d0c5-10d4-49c7-89d1-0b244cb04b34",
+        "itemId": "19510765-0b90-4ee4-826e-fda387497282",
         "databaseName": "kdb_fabricEvents",
         "tableName": "jobEvents",
         "inputSerialization": {
