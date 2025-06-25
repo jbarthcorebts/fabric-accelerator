@@ -1,14 +1,14 @@
 {
   "payload": {
     "connections": {
-      "960349907": {
+      "-1829412680": {
         "clusterType": "Engine",
-        "name": "960349907",
+        "name": "-1829412680",
         "connectionString": "",
         "databases": {
-          "960349907/e3258eb8-0f5b-87e3-4a96-351472a1085d": {
-            "id": "960349907/e3258eb8-0f5b-87e3-4a96-351472a1085d",
-            "name": "e3258eb8-0f5b-87e3-4a96-351472a1085d",
+          "-1829412680/92599a83-f40d-457d-b088-cd1d890088ed": {
+            "id": "-1829412680/92599a83-f40d-457d-b088-cd1d890088ed",
+            "name": "92599a83-f40d-457d-b088-cd1d890088ed",
             "prettyName": "eh_fabricAccelerator",
             "fetchState": "notStarted",
             "fetchStateError": "",
@@ -20,7 +20,7 @@
             "majorVersion": 27
           }
         },
-        "id": "960349907",
+        "id": "-1829412680",
         "fetchState": "notStarted",
         "fetchStateError": "",
         "tooBigToCache": true,
@@ -40,7 +40,7 @@
         "commandInContext": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n",
         "executionStatus": "notStarted",
         "clientRequestId": null,
-        "entityInContext": "960349907/e3258eb8-0f5b-87e3-4a96-351472a1085d",
+        "entityInContext": "-1829412680/92599a83-f40d-457d-b088-cd1d890088ed",
         "commandType": "Query",
         "commandWithoutLeadingComments": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n",
         "hideEmptyColumns": false,
