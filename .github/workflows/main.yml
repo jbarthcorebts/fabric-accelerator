@@ -32,7 +32,7 @@ jobs:
           DEPLOYMENT_NAME="validate-$(date +%s)"
           az deployment sub validate \
             --name $DEPLOYMENT_NAME \
-            --location westus \
+            --location eastus \
             --template-file iac/bicep/main.bicep \
             --no-prompt \
             --debug
@@ -42,7 +42,7 @@ jobs:
           DEPLOYMENT_NAME="deploy-$(date +%s)"
           az deployment sub create \
             --name $DEPLOYMENT_NAME \
-            --location westus \
+            --location eastus \
             --template-file iac/bicep/main.bicep \
             --no-prompt \
             --debug
