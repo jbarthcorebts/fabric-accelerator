@@ -36,7 +36,7 @@ param purview_location string= 'eastus'
 param purview_name string = 'NRIDG' // Replace with a Globally unique name
 
 @description('Flag to indicate whether auditing of data platform resources should be enabled')
-param enable_audit bool = true
+param enable_audit bool = false
 
 @description('Resource group where audit resources will be deployed if enabled. Resource group will be created if it doesnt exist')
 param auditrg string= 'rg-audit'
