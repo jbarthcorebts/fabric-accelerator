@@ -12,10 +12,10 @@ param rglocation string = 'eastus'
 param cost_centre_tag string = 'acceleratornri'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'joseph.barth@nri-na.com'
+param owner_tag string = 'Joseph.Barth@nri-na.com'
 
 @description('Subject Matter EXpert (SME) tag that will be applied to all resources in this deployment')
-param sme_tag string ='joseph.barth@nri-na.com'
+param sme_tag string ='Joseph.Barth@nri-na.com'
 
 @description('Timestamp that will be appendedto the deployment name')
 param deployment_suffix string = utcNow()
