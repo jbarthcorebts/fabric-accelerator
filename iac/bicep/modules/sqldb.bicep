@@ -154,3 +154,4 @@ output sqlserver_uniquename string = sqlserver.name
 output database_name string = database.name
 output sqlserver_resource object = sqlserver
 output database_resource object = database
+output audit_storage_account_name = audit_storage_account.name
