@@ -116,7 +116,7 @@ module storage_permissions 'storage-permissions.bicep' = if(enable_audit)  {
   }
 }
 
-var auditStorageEndpoint = enable_audit ? audit_storage_account.properties.primaryEndpoints.blob : ''
+var auditStorageEndpoint = ''
 
 // Deploy audit diagnostics Azure SQL Server to storage account
 resource sqlserver_audit 'Microsoft.Sql/servers/auditingSettings@2023-08-01-preview' = if(enable_audit)  {
