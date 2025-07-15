@@ -83,4 +83,4 @@ resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@20
 }
 
 output keyvault_name string = keyvault.name
-output existing_purview_account_name = existing_purview_account.name
+output existing_purview_account_name string = existing_purview_account.name
