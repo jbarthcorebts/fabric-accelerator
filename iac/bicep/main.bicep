@@ -110,8 +110,8 @@ module kv './modules/keyvault.bicep' = {
      cost_centre_tag: cost_centre_tag
      owner_tag: owner_tag
      sme_tag: sme_tag
-     purview_account_name: enable_purview ? purview.outputs.purview_account_name : ''
-     purviewrg: enable_purview ? purviewrg : ''
+     purview_account_name:  ''
+     purviewrg: ''
      enable_purview: enable_purview
   }
 }
