@@ -21,7 +21,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           scope: subscription
-          region: westus
+          region: eastus
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           template: iac/bicep/main.bicep
           deploymentMode: Validate
@@ -46,7 +46,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           scope: subscription
-          region: westus
+          region: eastus
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           template: iac/bicep/main.bicep
           deploymentName: fabric-deploy-${{ github.run_id }}
