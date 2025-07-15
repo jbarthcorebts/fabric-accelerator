@@ -7,7 +7,7 @@ jobs:
   validate:
     name: Validate Bicep Template
     runs-on: ubuntu-latest
-    environment: adminkensigaines
+    environment: nriacceleratorenv
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
