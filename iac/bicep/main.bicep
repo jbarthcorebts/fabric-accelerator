@@ -3,19 +3,19 @@ targetScope = 'subscription'
 
 // Parameters
 @description('Resource group where Microsoft Fabric capacity will be deployed. Resource group will be created if it doesnt exist')
-param dprg string= 'rg-fabric'
+param dprg string= 'rg-fabric2'
 
 @description('Microsoft Fabric Resource group location')
-param rglocation string = 'australiaeast'
+param rglocation string = 'westus'
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
 param cost_centre_tag string = 'MCAPS'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'whirlpool@contoso.com'
+param owner_tag string = 'admin@kensigainesdata.com'
 
 @description('Subject Matter EXpert (SME) tag that will be applied to all resources in this deployment')
-param sme_tag string ='sombrero@contoso.com'
+param sme_tag string ='admin@kensigainesdata.com'
 
 @description('Timestamp that will be appendedto the deployment name')
 param deployment_suffix string = utcNow()
@@ -24,10 +24,10 @@ param deployment_suffix string = utcNow()
 param create_purview bool = false
 
 @description('Flag to indicate whether to enable integration of data platform resources with either an existing or new Purview resource')
-param enable_purview bool = true
+param enable_purview bool = false
 
 @description('Resource group where Purview will be deployed. Resource group will be created if it doesnt exist')
-param purviewrg string= 'rg-datagovernance'
+param purviewrg string= 'rg-datagovernance2'
 
 @description('Location of Purview resource. This may not be same as the Fabric resource group location')
 param purview_location string= 'westus2'
@@ -36,10 +36,10 @@ param purview_location string= 'westus2'
 param purview_name string = 'ContosoDG' // Replace with a Globally unique name
 
 @description('Flag to indicate whether auditing of data platform resources should be enabled')
-param enable_audit bool = true
+param enable_audit bool = false
 
 @description('Resource group where audit resources will be deployed if enabled. Resource group will be created if it doesnt exist')
-param auditrg string= 'rg-audit'
+param auditrg string= 'rg-audit2'
 
 
 // Variables

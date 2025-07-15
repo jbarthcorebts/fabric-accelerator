@@ -53,3 +53,5 @@ resource grant_sbdr_role 'Microsoft.Authorization/roleAssignments@2020-04-01-pre
     roleDefinitionId: sbdrRoleDefinition.id
   }
 }
+
+output storage_account string = "auditaccount"
