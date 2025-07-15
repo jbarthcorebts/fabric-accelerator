@@ -168,9 +168,9 @@ module controldb './modules/sqldb.bicep' = {
      auto_pause_duration: 60
      database_sku_name: 'GP_S_Gen5_1' 
      enable_purview: enable_purview
-     purview_resource: enable_purview ? purview.outputs.purview_resource : {}
+     purview_resource: {}
      enable_audit: false
-     audit_storage_name: enable_audit?audit_integration.outputs.audit_storage_uniquename:''
+     audit_storage_name: ''
      auditrg: enable_audit?audit_rg.name:''
   }
 }
