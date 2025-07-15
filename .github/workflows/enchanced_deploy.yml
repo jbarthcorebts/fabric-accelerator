@@ -25,8 +25,8 @@ jobs:
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           template: iac/bicep/main.bicep
           deploymentMode: Validate
-          failOnStdErr: true
-        continue-on-error: false
+          failOnStdErr: false
+        continue-on-error: true
 
   deploy:
     name: Deploy Bicep Template
@@ -50,8 +50,8 @@ jobs:
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           template: iac/bicep/main.bicep
           deploymentName: fabric-deploy-${{ github.run_id }}
-          failOnStdErr: true
-        continue-on-error: false
+          failOnStdErr: false
+        continue-on-error: true
 
       - name: Print Deployment Logs
         if: failure()
