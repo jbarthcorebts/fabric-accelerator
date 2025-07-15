@@ -77,7 +77,8 @@ resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@20
   properties: {
     accessPolicies: [
       { tenantId: subscription().tenantId
-        objectId: existing_purview_account.identity.principalId
+        //objectId: existing_purview_account.identity.principalId
+        objectId: ''
         permissions: { secrets:  ['list','get']}
 
       }
