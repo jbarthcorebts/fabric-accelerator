@@ -3,19 +3,19 @@ targetScope = 'subscription'
 
 // Parameters
 @description('Resource group where Microsoft Fabric capacity will be deployed. Resource group will be created if it doesnt exist')
-param dprg string= 'rg-fabric2'
+param dprg string= 'rg-fabric'
 
 @description('Microsoft Fabric Resource group location')
-param rglocation string = 'westus'
+param rglocation string = 'eastus'
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
 param cost_centre_tag string = 'MCAPS'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'admin@kensigainesdata.com'
+param owner_tag string = 'Joseph.Barth@nri-na.com'
 
 @description('Subject Matter EXpert (SME) tag that will be applied to all resources in this deployment')
-param sme_tag string ='admin@kensigainesdata.com'
+param sme_tag string ='Joseph.Barth@nri-na.com'
 
 @description('Timestamp that will be appendedto the deployment name')
 param deployment_suffix string = utcNow()
@@ -27,10 +27,10 @@ param create_purview bool = false
 param enable_purview bool = false
 
 @description('Resource group where Purview will be deployed. Resource group will be created if it doesnt exist')
-param purviewrg string= 'rg-datagovernance2'
+param purviewrg string= 'rg-datagovernance'
 
 @description('Location of Purview resource. This may not be same as the Fabric resource group location')
-param purview_location string= 'westus2'
+param purview_location string= 'eastus'
 
 @description('Resource Name of new or existing Purview Account. Must be globally unique. Specify a resource name if either create_purview=true or enable_purview=true')
 param purview_name string = 'ContosoDG' // Replace with a Globally unique name
@@ -39,7 +39,7 @@ param purview_name string = 'ContosoDG' // Replace with a Globally unique name
 param enable_audit bool = true
 
 @description('Resource group where audit resources will be deployed if enabled. Resource group will be created if it doesnt exist')
-param auditrg string= 'rg-audit2'
+param auditrg string= 'rg-audit'
 
 
 // Variables
