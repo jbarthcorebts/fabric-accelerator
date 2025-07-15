@@ -24,7 +24,7 @@ param deployment_suffix string = utcNow()
 param create_purview bool = false
 
 @description('Flag to indicate whether to enable integration of data platform resources with either an existing or new Purview resource')
-param enable_purview bool = true
+param enable_purview bool = false
 
 @description('Resource group where Purview will be deployed. Resource group will be created if it doesnt exist')
 param purviewrg string= 'rg-datagovernance2'
@@ -99,7 +99,6 @@ module purview './modules/purview.bicep' = if (create_purview || enable_purview)
   }
   
 }
-output purview_name string = purview.name
 
 // Deploy Key Vault with default access policies using module
 module kv './modules/keyvault.bicep' = {
@@ -111,8 +110,8 @@ module kv './modules/keyvault.bicep' = {
      cost_centre_tag: cost_centre_tag
      owner_tag: owner_tag
      sme_tag: sme_tag
-     purview_account_name:  ''
-     purviewrg: ''
+     purview_account_name:  'kdgdpurview'
+     purviewrg: 'purviewaccount'
      enable_purview: enable_purview
   }
 }
