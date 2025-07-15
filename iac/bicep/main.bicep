@@ -99,7 +99,7 @@ module purview './modules/purview.bicep' = if (create_purview || enable_purview)
   }
   
 }
-output purview_name = purview.name
+output purview_name string = purview.name
 
 // Deploy Key Vault with default access policies using module
 module kv './modules/keyvault.bicep' = {
