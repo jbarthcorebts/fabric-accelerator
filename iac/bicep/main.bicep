@@ -127,7 +127,7 @@ module audit_integration './modules/audit.bicep' = if(enable_audit) {
   name: audit_deployment_name
   scope: audit_rg
   params:{
-    location: audit_rg.location
+    location: 'westus'
     cost_centre_tag: cost_centre_tag
     owner_tag: owner_tag
     sme_tag: sme_tag
