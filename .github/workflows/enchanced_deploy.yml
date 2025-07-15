@@ -1,0 +1,59 @@
+name: Provision Fabric Data Platform
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Bicep Template
+    runs-on: ubuntu-latest
+    environment: adminkensigaines
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: '{"clientId":"${{ secrets.ACTION_SPN_CLIENTID }}","clientSecret":"${{ secrets.ACTION_SPN_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+
+      - name: Validate Bicep Template
+        uses: azure/arm-deploy@v1
+        with:
+          scope: subscription
+          region: westus
+          subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
+          template: iac/bicep/main.bicep
+          deploymentMode: Validate
+          failOnStdErr: true
+        continue-on-error: false
+
+  deploy:
+    name: Deploy Bicep Template
+    runs-on: ubuntu-latest
+    environment: adminkensigaines
+    needs: validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: '{"clientId":"${{ secrets.ACTION_SPN_CLIENTID }}","clientSecret":"${{ secrets.ACTION_SPN_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+
+      - name: Deploy Bicep Template
+        uses: azure/arm-deploy@v1
+        with:
+          scope: subscription
+          region: westus
+          subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
+          template: iac/bicep/main.bicep
+          deploymentName: fabric-deploy-${{ github.run_id }}
+          failOnStdErr: true
+        continue-on-error: false
+
+      - name: Print Deployment Logs
+        if: failure()
+        run: |
+          echo "Deployment failed. Please check the Azure Activity Log for more details."
