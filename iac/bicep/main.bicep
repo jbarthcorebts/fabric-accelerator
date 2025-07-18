@@ -12,19 +12,19 @@ param rglocation string = 'eastus'
 param cost_centre_tag string = 'MCAPS'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'Joseph.Barth@nri-na.com'
+param owner_tag string = 'admin@kensigainesdata.com'
 
 @description('Subject Matter EXpert (SME) tag that will be applied to all resources in this deployment')
-param sme_tag string ='Joseph.Barth@nri-na.com'
+param sme_tag string ='admin@kensigainesdata.com'
 
 @description('Timestamp that will be appendedto the deployment name')
 param deployment_suffix string = utcNow()
 
 @description('Flag to indicate whether to create a new Purview resource with this data platform deployment')
-param create_purview bool = false
+param create_purview bool = true
 
 @description('Flag to indicate whether to enable integration of data platform resources with either an existing or new Purview resource')
-param enable_purview bool = false
+param enable_purview bool = true
 
 @description('Resource group where Purview will be deployed. Resource group will be created if it doesnt exist')
 param purviewrg string= 'rg-datagovernance'
