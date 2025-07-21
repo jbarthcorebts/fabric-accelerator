@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: nri_env  # 👈 Specify your branch here
 
       - name: Azure Login
         uses: azure/login@v1
@@ -36,7 +38,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+        with:
+          ref: nri_env  # 👈 Specify your branch here
+          
       - name: Azure Login
         uses: azure/login@v1
         with:
